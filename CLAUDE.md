@@ -2,6 +2,14 @@
 
 This file provides guidance to AI coding assistants when working with code in this repository.
 
+## 🔴 最高优先级：隐私脱敏与本地映射铁律
+
+1. **绝对禁止实名/公司名入库**：严禁在代码、测试、配置、文档中硬编码真实候选人姓名、目标公司名、企业工作邮箱（`@baidu.com`）或个人 macOS 绝对路径（`/Users/xxx/...`）。
+2. **私有配置本地隔离**：所有私人专属词表、目标公司、真实姓名及本地环境路径，必须且仅允许写在 `config/analyzer-config.local.yaml`（已由 `.gitignore` 忽略）。
+3. **真实复盘文档本地隔离**：包含具体面试细节与题目的复盘底稿，必须存放在 `docs/private/`（已由 `.gitignore` 忽略）。
+4. **Git 身份隔离**：仓库本地提交者必须配置为开源独立身份（`zos1n <zos1n@outlook.com>`）。
+5. **任务文档自动归档**：临时方案/改造任务文件落地并通过验证后，必须自动移动归档至 `docs/archive/`。
+
 ## 项目定位
 
 面试录屏分析工具 (`analyze-interview`) —— 基于 Apple Silicon MLX 硬件加速的**全本地、零云端费用、隐私保护**的面试录屏音轨提取、ASR 语音转写、病理修复、问题索引、Turbo 局部精转与逐题结构化复盘系统。
